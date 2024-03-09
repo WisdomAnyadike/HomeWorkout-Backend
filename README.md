@@ -12,6 +12,7 @@ Nodemailer: Nodemailer is a module for Node.js applications that allows sending 
 Axios: Axios is a popular HTTP client for making requests to external services from Node.js applications. It supports Promise-based requests and provides features for handling request and response data.
 dotenv: dotenv is a module that loads environment variables from a .env file into process.env. It simplifies the process of managing environment-specific configurations in Node.js applications.
 cors: cors is a middleware for enabling Cross-Origin Resource Sharing (CORS) in Express.js applications. It allows controlling access to resources from different origins.
+
 Project Structure
 The project follows a modular structure, with separate directories for different components:
 
@@ -29,49 +30,53 @@ Endpoint: POST /signup
 Description: Creates a new user account with provided username, email, and password.
 Request Body: { userName, email, password }
 Response: { message, status }
+
 Login
 Endpoint: POST /login
 Description: Authenticates a user with provided email and password, generating a JWT token for further access.
 Request Body: { email, password }
 Response: { message, status }
+
 Edit Password
 Endpoint: POST /editpassword
 Description: Updates user password with a new one.
 Request Body: { password }
 Response: { message, status }
+
 Edit User Information
 Endpoint: POST /edituserinfo
 Description: Updates user information such as username and email.
 Request Body: { userName, email }
 Response: { message, status }
+
 Delete Account
 Endpoint: POST /deleteUser
 Description: Deletes user account permanently.
 Response: { message, status }
+
 Get OTP (One-Time Password)
 Endpoint: POST /getOtp
 Description: Sends OTP to the user's email for password reset.
 Request Body: { email }
 Response: { message, status, userOtp }
+
 Change Password with OTP
 Endpoint: POST /changePassword
 Description: Changes user password using OTP verification.
 Request Body: { password }
 Response: { message, status }
+
 Installation and Setup
 To set up the User Authentication and Management System, follow these steps:
 
-Clone the repository
-
-
+Clone the repository:
 git clone <repository-url>
+
 Install dependencies:
-
-
 npm install
+
 Create a .env file:
 Create a .env file in the root directory of the project and add the following environment variables:
-
 makefile
 CONNECTION_STRING=<your-mongodb-connection-string>
 JWT_SECRET=<your-jwt-secret>
