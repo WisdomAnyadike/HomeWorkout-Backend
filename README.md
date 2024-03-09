@@ -1,6 +1,6 @@
 User Authentication and Management System Documentation
 Introduction
-The User Authentication and Management System is a Node.js application designed to handle user authentication and management for an e-commerce website. It provides essential functionality for user signup, login, password management, and account deletion. Additionally, it includes features such as sending OTP for password reset and sending welcome emails upon signup.
+The User Authentication and Management System is a Node.js application designed to handle user authentication and management for a Homeworkout App. It provides essential functionality for user signup, login, password management, and account deletion. Additionally, it includes features such as sending OTP for password reset and sending welcome emails upon signup.
 
 Technologies Used
 Node.js: Server-side JavaScript runtime environment
