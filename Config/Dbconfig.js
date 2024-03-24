@@ -1,19 +1,25 @@
 const mongoose = require('mongoose')
 
-const ConnectDb = async() => {
- const connectString = process.env.CONNECTION_STRING
- try {
+const ConnectDb = async () => {
+  const connectString = process.env.CONNECTION_STRING
+  try {
     const connecter = await mongoose.connect(connectString)
-    if (connecter){
+    if (connecter) {
       console.log('Database connected successfully');
-    }else{
-      console.log('Couldnt connect to database');
+      console.log("  ▀▄   ▄▀");
+      console.log(" ▄█▀███▀█▄");
+      console.log("█▀███████▀█");
+      console.log("█ █▀▀▀▀▀█ █");
+      console.log("   ▀▀ ▀▀");
+      console.log("Hello Adventurer, fitness api is live !!!!");
+    } else {
+      console.log('Couldnt connect to database, connectString missing');
     }
-    
-    
- } catch (error) {
+
+
+  } catch (error) {
     console.log('database network error', error);
- }
+  }
 
 
 
