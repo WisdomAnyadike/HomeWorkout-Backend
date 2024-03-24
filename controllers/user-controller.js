@@ -1,5 +1,5 @@
-const { sendUserOtp, SendSignupMssg } = require("../Config/Mailer")
-const userModel = require("../Models/usermodel")
+const { sendUserOtp, SendSignupMssg } = require("../config/Mailer")
+const userModel = require("../models/usermodel")
 const bcrypt = require('bcryptjs')
 
 
