@@ -1,15 +1,15 @@
 const express = require('express')
-const ConnectDb = require('./Config/Dbconfig')
+const ConnectDb = require('./config/Dbconfig')
 const app = express()
-const env = require('dotenv').config()
+require('dotenv').config()
 const cors = require('cors')
-const userRouter = require('./Routes/userroutes')
+const userRouter = require('./routes/user-route')
 
 app.use(express.json())
 app.use(cors({origin: "*"}))
 app.use('/Api/user' , userRouter)
 
-const port = 2345
+const port = process.env.PORT
 
 
 
